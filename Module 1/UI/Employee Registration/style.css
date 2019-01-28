@@ -1,41 +1,6 @@
 body{
     font-family: serif;
-    background: url(images/emp.jpg) no-repeat center center;
-    background-size: cover;
-    background-attachment: fixed;
-    font-size: 16px;
-}
-.jumbotron{
-    background-color: transparent;
-    color: rgb(0, 0, 0);
-    text-align: center;
-    margin: 0;
-    padding: 10px;
-    letter-spacing: 2.5px;
+   
+    font-size: 17px;
 }
 
-.Address{
-    margin-bottom: 10px;
-}
-
-.state{
-    margin-bottom: 10px;
-}
-.District{
-    margin-bottom: 10px;
-}
-.Employee{
-    margin-bottom: 10px;
-}
-.Contact{
-    margin-bottom: 10px;
-}
-.Designation{
-    margin-bottom: 10px;
-}
-.Experience{
-    margin-bottom: 10px;
-}
-.Company{
-    margin-bottom: 10px;
-}
