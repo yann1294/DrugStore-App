@@ -1,168 +1,173 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-    <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.4.0/css/bootstrap4-toggle.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <title>Employee Registration Form</title>
-  </head>
-  <body>
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+<link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.4.0/css/bootstrap4-toggle.min.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<title>Employee Registration Form</title>
+</head>
+<body>
 
-    <h1 class="display-1 text-center">Employee Registration</h1>
+<h1 class="display-1 text-center">Employee Registration</h1>
         <div class="card">
                 <div class="card-body">
-                        <form method="post" action="">
+                        <form method="post" action="" id="registration-form">
                                 <div class="container-fluid">
-                                        <div class="form-row form-group col-lg-12">
-                                            <div class="col-lg-1">
-                                                    <label for="" class="form-control-label">Name</label>
-                                            </div>
-                                                <div class="col-lg-2">
-                                                        <input id="firstName" class="form-control form-control-lg" type="text" placeholder="First Name">
-                                                    </div>
-                                                    <div class="col-lg-2">
-                                                        <input id="lastName" type="text" class="form-control form-control-lg" placeholder="Last Name">
-                                                    </div>
-                                                    <div class="col-lg-2">
-                                                            <label for="gender" class="form-control-label">Gender</label>    
-                                                    </div>
-                                                    <div class="col-lg-1">
-                                                            <input name="gender" class="form-control" type="checkbox" checked data-toggle="toggle" data-on="Male" data-off="Female" data-onstyle="success" data-offstyle="warning">
-                                                    </div>
+                                        <div class="form-row form-group col-md-12">
+                                        <div class="col-md-1">
+                                                <label for="" class="form-control-label">Name</label>
+                                        </div>
+                                                <div class="col-md-2">
+                                                        <input id="firstName" name="registration[firstName]" class="form-control form-control-md" type="text" placeholder="First Name">
+                                                </div>
+                                                <div class="col-md-2">
+                                                        <input id="lastName" name="registration[lastName]" type="text" class="form-control form-control-md" placeholder="Last Name">
+                                                </div>
+                                                <div class="col-md-1">
+                                                        <label for="gender"  class="form-control-label">Gender</label>    
+                                                </div>
+                                                <div class="col-md-2">
+                                                        <input name="registration[gender]" class="form-control" type="checkbox" checked data-toggle="toggle" data-on="Male" data-off="Female" data-onstyle="success" data-offstyle="warning">
+                                                </div>
+
+                                                
                                         </div>
                                 </div>
                                 
                                 <div class="container-fluid">
-                                    <div class="form-row form-group col-lg-12">
-                                        <div class="col-lg-1">
+                                <div class="form-row form-group col-md-12">
+                                        <div class="col-md-1">
                                                 <label for="presentAddress" class="form-control-label">Present Address</label>
                                         </div>
-                                        <div class="col-lg-4">
-                                                <textarea class="form-control form-control-lg" id="presentAddress" rows="3"  placeholder="Present Address"></textarea>
+                                        <div class="col-md-4">
+                                                <textarea name="registration[presentAddress]" class="form-control form-control-md" id="presentAddress" rows="3"  placeholder="Present Address"></textarea>
                                         </div>
                                         
-                                                <div class="col-lg-2">
-                                                            <div class="form-check">
-                                                                    <input class="form-check-input" type="checkbox" id="gridCheck1" checked data-toggle="collapse" href="#collapseExample" aria-expanded="true" aria-controls="collapseExample">
-                                                                    <div class="col-lg-1">
-                                                                            <label class="form-check-label" for="gridCheck1">
-                                                                                    Same as present address.
-                                                                                  </label>
-                                                                    </div>
-                                                                  </div>
-                                                    
+                                                <div class="col-md-1">
+                                                        <div class="form-check">
+                                                                <input class="form-check-input" type="checkbox" id="gridCheck1" checked data-toggle="collapse" href="#collapseExample" aria-expanded="true" aria-controls="collapseExample">
+                                                                <div class="col-md-1">
+                                                                        <label class="form-check-label" for="gridCheck1">
+                                                                                Same as present address.
+                                                                                </label>
+                                                                </div>
+                                                                </div>
                                                 </div>
-                                                <div class="col-lg-5">
-                                                        <textarea class="form-control form-control-lg" id="collapseExample" rows="3"  placeholder="Permanent Address"></textarea>
+                                                <div class="col-md-5">
+                                                        <textarea name="registration[permanentAddress]" class="form-control form-control-md" id="collapseExample" rows="3"
+                                                                placeholder="Permanent Address"></textarea>
                                                 </div>
-                                        
-                                        
-                                    </div>    
+                                </div>    
                                 </div>
-        
                                 <div class="container-fluid">
-                                    <div class="form-row form-group col-lg-12">
-                                        <div class="col-lg-1">
+                                <div class="form-row form-group col-md-12">
+                                        <div class="col-md-1">
                                                 <label for="state" class="form-control-label">State</label>    
                                         </div>
-                                        <div class="col-lg-4">
-                                            <select name="state" id="listBox" onchange='selct_district(this.value)'class="custom-select form-control form-control-lg">
-                                                    <option value="">Select state</option>
-                                            </select>
+                                        <div class="col-md-4">
+                                        <select name="registration[state]" id="listBox" onchange='selct_district(this.value)'class="custom-select form-control form-control-md">
+                                                <option value="">Select state</option>
+                                        </select>
                                         </div>
-                                        <div class="col-lg-2">
+                                        <div class="col-md-1">
                                                 <label for="district" class="form-control-label">District</label>    
                                         </div>
-                                        <div class="col-lg-5">
-                                                <select id='secondlist' class="custom-select form-control form-control-lg">
+                                        <div class="col-md-5">
+                                                <select name="registration[district]" id='secondlist' class="custom-select form-control form-control-md">
                                                         <option value="">Select district</option>
                                                 </select>
-                                            </div>
-                                    </div>
+                                        </div>
                                 </div>
-        
+                                </div>
                                 <div class="container-fluid ">
-                                    <div class="form-row form-group col-lg-12 ">
-                                        <div class="col-lg-1">
+                                <div class="form-row form-group col-md-12 ">
+                                        <div class="col-md-1">
                                                 <label for="" class=" form-control-label">Pin Code</label>
                                         </div>
-                                        <div class="col-lg-4">
-                                                
-                                                <INPUT class="form-control form-control-lg" id="txtNumber"  onkeypress="return isNumberKey(event)"   type="text" name="txtNumber" maxlength="6">
+                                        <div class="col-md-4">
+                                                <input class="form-control form-control-md" type="number" id="txtNumber" name="txtNumber" maxlength="6" minlength="6"/>
                                         </div>
-                                        <div class="col-lg-2">
+                                        <div class="col-md-1">
                                                 <label for="" class="form-control-label">Employee Type</label>    
                                         </div>
-                                        <div class="col-lg-4">
-                                                <input type="checkbox" data-toggle="toggle" data-on="Permanent" data-off="Contract" data-onstyle="primary" data-offstyle="success" id="EmpTypeToggle">
+                                        <div class="col-md-5">
+                                                <input name="registration[employeeType]" type="checkbox" data-toggle="toggle" data-on="Permanent" data-off="Contract" data-onstyle="primary" data-offstyle="success" id="EmpTypeToggle">
                                         </div>
-                                    </div>
                                 </div>
-
-                                <div class="container-fluid ">
-                                    <div class="form-row form-group col-lg-12">
-                                        <div class="col-lg-1">
-                                                <label for="" class="form-control-label"><span>Designation</span></label>
-                                        </div>
-                                            <div class="col-lg-4">
-                                                    <input class="form-control form-control-lg" type="text">
-                                            </div>
-                                            <div class="col-lg-2">
-                                                    <label for="" class="">Experience</label>    
-                                            </div>
-                                            
-                                            <div class="col-lg-3">
-                                                    <input class="form-control form-control-lg" type="text" placeholder="Years" id="years"/>
-                                            </div>
-                                            <div class="col-lg-2">
-                                                    <input class="form-control form-control-lg" type="text" placeholder="Months" id="months"/>
-                                            </div>
-
-                                    </div>
-                                    <div class="container-fluid col-lg-12">
-                                            <div class="form-row form-group ">
-                                                <div class="col-lg-1">
-                                                        <label for="" class="form-control-label">Previous company details</label>
+                                </div>
+                                <div class="container-fluid">
+                                        <div class="form-row form-group col-md-12">
+                                                <div class="col-md-1">
+                                                <label for="" class="form-control-label">Contract Duration</label>
                                                 </div>
-                                                    
-                                                    <div class="col-lg-4">
-                                                            <input class="form-control form-control-lg" type="text" placeholder="Name of the company"/>
-                                                    </div>
-                                                    <div class="col-lg-7">
-                                                            <textarea class="form-control form-control-lg" id="companyAddress" rows="4"  placeholder="Address of the company"></textarea>
-                                                    </div>
-        
-                                            </div>
+                                                <div class="col-md-4">
+                                                <input class="form-control form-control-md" type="number" name="" id="" placeholder="inMonths">
+                                                </div>
+                                                
+                                                <div class="col-md-1">
+                                                        <label for="" class="form-control-label"><span>Designation</span></label>
+                                                </div>
+                                                <div class="col-md-5">
+                                                        <input name="registration[designation]" class="form-control form-control-md" type="text">
+                                                </div>
+                                                </div>
+                                        </div>
                                 </div>
-                            </form>
+                                <div class="container-fluid ">
+                                <div class="form-row form-group col-md-12">
+                                <div class="col-md-1">
+                                        <label for="" class="form-control-label">Experience</label>
+                                </div>
+                                <div class="col-md-2">
+                                        <input id="" name="" class="form-control form-control-md" type="number"
+                                                placeholder="Years">
+                                </div>
+                                <div class="col-md-2">
+                                        <input id="" name="" type="number" class="form-control form-control-md" placeholder="Months">
+                                </div>
+                                <div class="col-md-1">
+                                        <label for="" class="form-control-label">Previous company details</label>
+                                </div>
+                                <div class="col-md-5">
+                                        <input name="registration[previousCompanyName]" class="form-control form-control-md" type="text" placeholder="Name of the company" />
+                                        <textarea name="registration[previousCompanyAddress]" class="form-control form-control-md mt-3" id="companyAddress" rows="3"
+                                                placeholder="Address of the company"></textarea>
+                                </div>
+                                </div>
+                                <div class="row  d-flex justify-content-center col-md-12 mt-5">
+                                        <div class="col-md-5">
+                                
+                                        </div>
+                                        <div class="col-md-1">
+                                                <button class="btn btn-primary btn-md" style="">Save</inpu>
+                                        </div>
+                                        <div class="col-md-1">
+                                                <button class="btn btn-danger btn-md" style="">Cancel</button>
+                                        </div>
+                                        <div class="col-md-5">
+                                
+                                        </div>
+                                </div>
+                        </form>
                 </div>
-              </div>
-              <div class="footer">
-                  <div class="row  d-flex justify-content-center col-lg-12">
-                        <div class="col-lg-3">
-                                <button type="button" class="btn btn-primary btn-lg" style="">Save</button>
-                            </div>
-                            <div class="col-lg-3">
-                                <button type="button" class="btn btn-danger btn-lg" style="">Cancel</button>
-                              </div>
-                  </div>
-                    
-                  </div>
-    
+        </div>
+        <div class="footer">
+        </div>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.4.0/js/bootstrap4-toggle.min.js"></script>
-    <script src="customUI.js"></script>
-    <script language="Javascript" src="jquery.js"></script>
-		<script type="text/JavaScript" src='state.js'></script>
-  </body>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.4.0/js/bootstrap4-toggle.min.js"></script>
+<script src="customUI.js"></script>
+<script language="Javascript" src="jquery.js"></script>
+<script type="text/JavaScript" src='state.js'></script>
+</body>
 </html>
